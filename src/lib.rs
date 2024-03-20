@@ -49,9 +49,9 @@ fn draw_star(context: &web_sys::CanvasRenderingContext2d, x: f64, y: f64, length
     // 各頂点を描画
     for i in 1..=num_points {
         current_angle_radians += if i % 2 == 0 {
-            (288.0 * std::f64::consts::PI / 180.0)
+            (144.0 * std::f64::consts::PI / 180.0)
         } else {
-            (108.0 * std::f64::consts::PI / 180.0)
+            (288.0 * std::f64::consts::PI / 180.0)
         };
         let next_x = previous_x + length * current_angle_radians.cos();
         let next_y = previous_y + length * current_angle_radians.sin();
