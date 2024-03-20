@@ -77,20 +77,22 @@ pub fn main_js() -> Result<(), JsValue> {
     // Set up css.
     // let style = document.create_element("style")?;
     // style.set_inner_html(include_str!("../assets/css/style.css"));
+    
+    // Draw a triangle.
     let canvas_triangle = document.get_element_by_id("canvas").unwrap()
         .dyn_into::<web_sys::HtmlCanvasElement>()?;
     let context_triangle = canvas_triangle.get_context("2d")?.unwrap()
         .dyn_into::<web_sys::CanvasRenderingContext2d>()?;
+    draw_triangle(&context_triangle, 150.0, 10.0, 100.0, 62.0);
 
-    draw_triangle(&context_triangle, 150.0, 150.0, 100.0, 240.0);
-
+    // Draw a star.
     let canvas_star = document.get_element_by_id("canvas-star").unwrap()
         .dyn_into::<web_sys::HtmlCanvasElement>()?;
     let context_star = canvas_star.get_context("2d")?.unwrap()
         .dyn_into::<web_sys::CanvasRenderingContext2d>()?;
+    draw_star(&context_star, 150.0, 100.0, 10.0, 0.0);
 
-    draw_star(&context_star, 150.0, 150.0, 100.0, 0.0);
-
+    // Console log.
     console::log_1(&JsValue::from_str("Hello world!"));
 
     Ok(())
