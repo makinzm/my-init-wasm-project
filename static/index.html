@@ -3,16 +3,32 @@
   <head>
     <meta charset="UTF-8">
     <title>My 1st Rust + Webpack project!</title>
+    <style>
+      body {background-color: rgb(207, 233, 237);}
+      canvas {
+        border: 1px solid black;
+      }
+      .canvas-container {
+          width: 300px;
+          height: 300px;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
   </head>
   <body>
     this is a triangle.
-    <canvas id="canvas">
-      Your browser cannot support a canvas. Please check here: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#browser_compatibility">canvas#browser_compatibility<a>
-    <canvas/>
+    <div class="canvas-container">
+      <canvas id="canvas">
+        Your browser cannot support a canvas. Please check here: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas#browser_compatibility">canvas#browser_compatibility</a>
+      </canvas>
+    </div>
     <br>
     this is a star.
-    <canvas id="canvas-star">
-    </canvas>
+    <div class="canvas-container">
+      <canvas id="canvas-star" >
+        hello
+      </canvas>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

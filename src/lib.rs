@@ -72,6 +72,11 @@ pub fn main_js() -> Result<(), JsValue> {
 
     // Set up.
     let document = web_sys::window().unwrap().document().unwrap();
+
+    // todo
+    // Set up css.
+    // let style = document.create_element("style")?;
+    // style.set_inner_html(include_str!("../assets/css/style.css"));
     let canvas_triangle = document.get_element_by_id("canvas").unwrap()
         .dyn_into::<web_sys::HtmlCanvasElement>()?;
     let context_triangle = canvas_triangle.get_context("2d")?.unwrap()
