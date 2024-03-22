@@ -34,6 +34,7 @@ fn draw_triangle(context: &web_sys::CanvasRenderingContext2d, x: f64, y: f64, le
 
     context.close_path();
     context.stroke();
+    context.fill();
 }
 
 fn draw_star(context: &web_sys::CanvasRenderingContext2d, x: f64, y: f64, length: f64, initial_angle_degrees: f64) {
@@ -63,6 +64,7 @@ fn draw_star(context: &web_sys::CanvasRenderingContext2d, x: f64, y: f64, length
 
     context.close_path();
     context.stroke();
+    context.fill();
 }
 
 // This is like the `main` function, except for JavaScript.
