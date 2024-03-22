@@ -85,7 +85,8 @@ pub fn main_js() -> Result<(), JsValue> {
         .dyn_into::<web_sys::HtmlCanvasElement>()?;
     let context_triangle = canvas_triangle.get_context("2d")?.unwrap()
         .dyn_into::<web_sys::CanvasRenderingContext2d>()?;
-    draw_triangle(&context_triangle, 150.0, 10.0, 100.0, 62.0);
+    draw_triangle(&context_triangle, 150.0, 10.0, 20.0, 62.0);
+    draw_triangle(&context_triangle, 100.0, 30.0, 10.0, 3.0);
 
     // Draw a star.
     let canvas_star = document.get_element_by_id("canvas-star").unwrap()
